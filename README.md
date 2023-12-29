@@ -4,7 +4,7 @@ This tool can fix Th12.8 replays affected by the [wrong route glitch](https://en
 
 Usage is straight-forward, just drag and drop your bugged replays into the EXE:
 
-(TODO: insert video)
+https://github.com/kikones34/th128-replay-fixer/assets/4391024/85fec5f9-3736-4874-b89b-efeec41e7f94
 
 Note that the original files will never be modified, instead a new file will be created with the suffix `.fixed.rpy`.
 
