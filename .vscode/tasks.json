@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make test",
+            "detail": "Builds test.exe in debug mode.",
+            "type": "make",
+            "targetName": "test",
+            "args": [
+                "DEBUG=1"
+            ],
+            "makeFileRelativePath": "Makefile",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+        },
+        {
+            "type": "shell",
+            "label": "Builds and runs test.exe.",
+            "command": "build\\debug\\test.exe",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "make test"
+            ]
+        }
+    ]
+}
