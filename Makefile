@@ -8,6 +8,7 @@ ifeq ($(DEBUG),1)
 	BUILD_DIR = build/debug
 else
     CXXFLAGS += -O3
+	LDFLAGS = -static
 	BUILD_DIR = build/release
 endif
 
@@ -47,7 +48,7 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | $(BUILD_DIR)
 
 
 $(MAIN): $(MAIN_OBJS)
-	$(CXX) -o $@ $^
+	$(CXX) $(LDFLAGS) -o $@ $^
 
 $(TEST): $(TEST_OBJS)
-	$(CXX) -o $@ $^
+	$(CXX) $(LDFLAGS) -o $@ $^
